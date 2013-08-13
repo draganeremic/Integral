@@ -8,10 +8,9 @@ namespace Integral.BoardDnd.Service.Test
     public class CanvasServiceTest
     {
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
         public void GetCanvasEntityTest()
         {
-            CanvasService.GetCanvasEntity(0);
+            Assert.IsNotNull(CanvasService.GetCanvasEntity(0));
         }
 
         [TestMethod]
