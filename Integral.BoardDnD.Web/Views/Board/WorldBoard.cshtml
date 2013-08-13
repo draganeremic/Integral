@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WorldBoard</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/fabric")
+    @Scripts.Render("~/bundles/default")
+</head>
+<body>
+    <div>
+        <input id="circle" type="button" value="Draw circle" />
+        <input id="square" type="button" value="Draw square" />
+        <input id="triangle" type="button" value="Draw triangle" />
+        <input id="image" type="button" value="Draw image" />
+        <input id="export" type="button" value="To JSON" />
+        <br />
+        <br />
+        <canvas id="c" width="1000" height="400" style="border:dotted"></canvas>
+    </div>
+</body>
+</html>
