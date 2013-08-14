@@ -8,13 +8,11 @@ namespace Integral.BoardDnD.Service
     {
         public static Canvas GetCanvasEntity(int campaignId)
         {
-            var text = File.ReadAllText(@"TestData\TestJSON.txt");
+            var text = File.ReadAllText(@"C:\git\Integral\Integral.BoardDnD.Service\TestData\TestJSON.txt");
             var c = Serializer.Deserialize<Entity.Canvas>(text);
 
             //var text = File.ReadAllText(@"TestData\SingleEntity.txt");
             //var c = Serializer.Deserialize<Entity.Base>(text);
-
-
             return c;
         }
 

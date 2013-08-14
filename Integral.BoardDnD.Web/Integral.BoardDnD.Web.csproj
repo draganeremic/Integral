@@ -171,6 +171,16 @@
   <ItemGroup>
     <Content Include="Views\Board\WorldBoard.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Integral.BoardDnD.Entity\Integral.BoardDnD.Entity.csproj">
+      <Project>{085A8B9B-34FF-4D31-82CB-A8BB8A094D5D}</Project>
+      <Name>Integral.BoardDnD.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Integral.BoardDnD.Service\Integral.BoardDnD.Service.csproj">
+      <Project>{0B9E2DF4-D691-4297-9421-2BE6B28E4529}</Project>
+      <Name>Integral.BoardDnD.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

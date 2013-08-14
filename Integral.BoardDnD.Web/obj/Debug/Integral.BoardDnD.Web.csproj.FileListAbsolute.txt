@@ -65,3 +65,9 @@ C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Owin.xml
 C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\git\Integral\Integral.BoardDnD.Web\bin\TestData\SingleEntity.txt
+C:\git\Integral\Integral.BoardDnD.Web\bin\TestData\TestJSON.txt
+C:\git\Integral\Integral.BoardDnD.Web\bin\Integral.BoardDnD.Service.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Integral.BoardDnD.Entity.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Integral.BoardDnD.Service.pdb
+C:\git\Integral\Integral.BoardDnD.Web\bin\Integral.BoardDnD.Entity.pdb

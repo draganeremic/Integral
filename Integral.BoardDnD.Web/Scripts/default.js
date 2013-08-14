@@ -4,6 +4,20 @@
     $.getJSON("/TestData/TestJSON.txt", function (json) {
         //canvas.loadFromJSON(json);
 
+        $(document).ready(function () {
+            $.ajax({
+                type:"POST",
+                url: "Board/GetBoard",
+                data: "{}", // pass in data usually
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                canvas.loadFromJSON(data);
+            }
+        });
+    });
+
         //setTimeout(function () { canvas.renderAll(); }, 50);
     });
 
