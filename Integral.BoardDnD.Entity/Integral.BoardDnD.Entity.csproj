@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
-    <Compile Include="Base2.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

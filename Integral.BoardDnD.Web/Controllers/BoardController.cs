@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -20,7 +21,8 @@ namespace Integral.BoardDnD.Web.Controllers
 
         public JsonResult GetBoard()
         {
-            return Json(CanvasService.GetCanvasEntity(0));
+            var canvas = CanvasService.GetCanvasEntity(0);
+            return Json(Serializer.Serialize(canvas));
         }
 
     }

@@ -14,6 +14,7 @@
             success: function (data) {
                 console.log(data);
                 canvas.loadFromJSON(data);
+                setTimeout(function () { canvas.renderAll(); }, 50);
             }
         });
     });

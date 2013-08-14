@@ -9,12 +9,24 @@ using Newtonsoft.Json;
 
 namespace Integral.BoardDnD.Service
 {
-    internal class Serializer
+    public class Serializer
     {
         public static T Deserialize<T>(string json)
         {
             return JsonConvert.DeserializeObject<T>(json);
-            //Newtonsoft.Json.JsonSerializer.Create()
+        }
+
+        public static string Serialize<T>(T obj)
+        {
+            var js = new JsonSerializer();
+            using (var sw = new StringWriter())
+            {
+                using (var jw = new JsonTextWriter(sw))
+                {
+                    js.Serialize(jw, obj);
+                }
+                return sw.ToString();
+            }
         }
 
 
