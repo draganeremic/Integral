@@ -56,3 +56,12 @@ C:\git\Integral\Integral.BoardDnD.Web\bin\System.Web.WebPages.Razor.xml
 C:\git\Integral\Integral.BoardDnD.Web\obj\Debug\Integral.BoardDnD.Web.csprojResolveAssemblyReference.cache
 C:\git\Integral\Integral.BoardDnD.Web\obj\Debug\Integral.BoardDnD.Web.dll
 C:\git\Integral\Integral.BoardDnD.Web\obj\Debug\Integral.BoardDnD.Web.pdb
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Owin.dll
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\git\Integral\Integral.BoardDnD.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
