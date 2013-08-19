@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>WorldBoard</title>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/fabric")
     @Scripts.Render("~/bundles/default")
 </head>
@@ -19,9 +20,11 @@
         <input id="triangle" type="button" value="Draw triangle" />
         <input id="image" type="button" value="Draw image" />
         <input id="export" type="button" value="To JSON" />
+        <img id="imgDrag" src="~/Images/squirrel.jpg" width="55" height="50" />
+        <img id="imgDrag1" src="~/Images/squirrel1.jpg" width="55" height="50" />
         <br />
         <br />
-        <canvas id="c" width="1000" height="400" style="border:dotted"></canvas>
+        <canvas id="c" width="1500" height="600" style="border:dotted"></canvas>
     </div>
 </body>
 </html>
