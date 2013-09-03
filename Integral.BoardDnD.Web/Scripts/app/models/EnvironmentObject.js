@@ -1,6 +1,6 @@
-﻿var BaseModel = fabric.util.createClass(fabric.Image, {
-    type: 'BaseModel',
-    
+﻿var EnvironmentObject = fabric.util.createClass(BaseModel, {
+    type: 'EnvironmentObject',
+
     initialize: function (element, options) {
         options || (options = {});
 
@@ -13,8 +13,8 @@
     }
 });
 
-BaseModel.FromURL = function (url, callback, imgOptions) {
+EnvironmentObject.FromURL = function (url, callback, imgOptions) {
     fabric.util.loadImage(url, function (img) {
-        callback(new BaseModel(img, imgOptions));
+        callback(new EnvironmentObject(img, imgOptions));
     });
 };

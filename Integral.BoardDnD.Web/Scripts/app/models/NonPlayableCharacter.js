@@ -1,6 +1,6 @@
-﻿var BaseModel = fabric.util.createClass(fabric.Image, {
-    type: 'BaseModel',
-    
+﻿var NonPlayableCharacter = fabric.util.createClass(Character, {
+    type: 'NonPlayableCharacter',
+
     initialize: function (element, options) {
         options || (options = {});
 
@@ -8,13 +8,13 @@
     },
     toObject: function () {
         return fabric.util.object.extend(this.callSuper('toObject'), {
-            
+
         });
     }
 });
 
-BaseModel.FromURL = function (url, callback, imgOptions) {
+NonPlayableCharacter.FromURL = function (url, callback, imgOptions) {
     fabric.util.loadImage(url, function (img) {
-        callback(new BaseModel(img, imgOptions));
+        callback(new NonPlayableCharacter(img, imgOptions));
     });
 };

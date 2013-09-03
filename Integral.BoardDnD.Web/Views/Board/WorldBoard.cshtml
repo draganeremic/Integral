@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/fabric")
-    @Scripts.Render("~/bundles/BaseModel")
+    @Scripts.Render("~/bundles/AllModels")
     @Scripts.Render("~/bundles/WorldBoard")
 </head>
 <body>
@@ -21,8 +21,8 @@
         <input id="triangle" type="button" value="Draw triangle" />
         <input id="image" type="button" value="Draw image" />
         <input id="export" type="button" value="To JSON" />
-        <img id="imgDrag" src="~/Images/squirrel.jpg" width="55" height="50" />
-        <img id="imgDrag1" src="~/Images/squirrel1.jpg" width="55" height="50" />
+        <img id="imgDrag" src="~/Images/squirrel.jpg" width="55" height="50" data-type="PlayableCharacter" data-name="Playable Squirrel" />
+        <img id="imgDrag1" src="~/Images/squirrel1.jpg" width="55" height="50" data-type="NonPlayableCharacter" data-name="Non-Playable Squirrel" />
         <br />
         <br />
         <canvas id="c" width="1500" height="600" style="border:dotted"></canvas>

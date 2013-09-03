@@ -29,8 +29,14 @@ namespace Integral.BoardDnD.Web
             bundles.Add(new ScriptBundle("~/bundles/fabric").Include(
                         "~/Scripts/libs/fabric-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/BaseModel").Include(
-                        "~/Scripts/app/models/BaseModel.js"));
+            bundles.Add(new ScriptBundle("~/bundles/AllModels").Include(
+                        "~/Scripts/app/models/BaseModel.js",
+                        "~/Scripts/app/models/Character.js",
+                        "~/Scripts/app/models/EnvironmentObject.js",
+                        "~/Scripts/app/models/NonPlayableCharacter.js",
+                        "~/Scripts/app/models/PlayableCharacter.js",
+                        "~/Scripts/app/models/SoundTriggerObject.js"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/WorldBoard").Include(
                         "~/Scripts/app/pages/WorldBoard.js"));

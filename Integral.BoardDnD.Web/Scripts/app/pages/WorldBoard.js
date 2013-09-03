@@ -28,9 +28,9 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    //console.log(data);
-                    //canvas.loadFromJSON(data);
-                    //setTimeout(function () { canvas.renderAll(); }, 50);
+                    console.log(data);
+                    canvas.loadFromJSON(data);
+                    setTimeout(function () { canvas.renderAll(); }, 50);
                 }
             });
         });
@@ -79,7 +79,7 @@
     });
 
     $("#image").click(function () {
-        AddImageToCanvas('/Images/squirrel.jpg', 100, 100);
+        AddImageToCanvas('/Images/squirrel.jpg', { top: 100, left: 100 });
     });
 
     $("#export").click(function () {
@@ -87,12 +87,29 @@
         console.log(test);
     });
 
-    function AddImageToCanvas(url, top, left)
+    function AddImageToCanvas(url, options)
     {
-        BaseModel.FromURL(url, function (oImg) {
-            oImg.set({ top: top, left: left, name: 'A FUCKING SQUIRREL!!!' });
-            canvas.add(oImg);
-        });
+        switch (options.type)
+        {
+            case "NonPlayableCharacter":
+                NonPlayableCharacter.FromURL(url, function (oImg) {
+                    oImg.set({ top: options.top, left: options.left, name: options.name, attributes: [{ name: 'test', value: 'test-val' }, { name: 'test1', value: 'test-val1' }] });
+                    canvas.add(oImg);
+                });
+                break;
+            case "PlayableCharacter":
+                PlayableCharacter.FromURL(url, function (oImg) {
+                    oImg.set({ top: options.top, left: options.left, name: options.name, attributes: [{ name: 'test', value: 'test-val' }, { name: 'test1', value: 'test-val1' }] });
+                    canvas.add(oImg);
+                });
+                break;
+            default:
+                BaseModel.FromURL(url, function (oImg) {
+                    oImg.set({ top: options.top, left: options.left });
+                    canvas.add(oImg);
+                });
+                break;
+        }
     }
 
     function OnObjectMoved(options) {
@@ -135,7 +152,7 @@
     });
     $("#c").droppable({
         drop: function (event, ui) {
-            AddImageToCanvas(ui.draggable.attr('src'), ui.offset.top, ui.offset.left)
+            AddImageToCanvas(ui.draggable.attr('src'), { top: ui.offset.top, left: ui.offset.left, name: ui.draggable.attr('data-name'), type: ui.draggable.attr('data-type') })
         },
         accept: function (el) {
             /* This is a filter function, you can perform logic here 
