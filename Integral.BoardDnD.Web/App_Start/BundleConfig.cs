@@ -9,10 +9,10 @@ namespace Integral.BoardDnD.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/libs/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.custom.js"));
+                        "~/Scripts/libs/jquery-ui-{version}.custom.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
             //            "~/Scripts/jquery-ui-{version}.js"));
@@ -27,10 +27,13 @@ namespace Integral.BoardDnD.Web
             //            "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/fabric").Include(
-                        "~/Scripts/fabric-*"));
+                        "~/Scripts/libs/fabric-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/default").Include(
-                        "~/Scripts/default.js"));
+            bundles.Add(new ScriptBundle("~/bundles/BaseModel").Include(
+                        "~/Scripts/app/models/BaseModel.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/WorldBoard").Include(
+                        "~/Scripts/app/pages/WorldBoard.js"));
 
             //bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 

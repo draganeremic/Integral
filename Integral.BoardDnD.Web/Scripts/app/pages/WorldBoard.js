@@ -28,9 +28,9 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    console.log(data);
-                    canvas.loadFromJSON(data);
-                    setTimeout(function () { canvas.renderAll(); }, 50);
+                    //console.log(data);
+                    //canvas.loadFromJSON(data);
+                    //setTimeout(function () { canvas.renderAll(); }, 50);
                 }
             });
         });
@@ -39,14 +39,15 @@
     });
 
     $("#square").click(function () {
-        var rect = new fabric.Rect({
+        var rect = new LabeledRect({
             left: 100,
             top: 100,
             width: 100,
             height: 100,
             fill: 'green',
             lockMovementX: true,
-            padding: 10
+            padding: 10,
+            label: "Test"
         });
 
         canvas.add(rect);
@@ -88,23 +89,8 @@
 
     function AddImageToCanvas(url, top, left)
     {
-        fabric.Image.fromURL(url, function (oImg) {
-            oImg.set({ top: top, left: left });
-
-            oImg.name = 'Squirrel!';
-            oImg.arrayTest = new Array();
-            oImg.arrayTest[0] = 123;
-            oImg.arrayTest[1] = "222";
-
-            oImg.toObject = (function (toObject) {
-                return function () {
-                    return fabric.util.object.extend(toObject.call(this), {
-                        name: this.name,
-                        arrayTest: this.arrayTest
-                    });
-                };
-            })(oImg.toObject);
-
+        BaseModel.FromURL(url, function (oImg) {
+            oImg.set({ top: top, left: left, name: 'A FUCKING SQUIRREL!!!' });
             canvas.add(oImg);
         });
     }
