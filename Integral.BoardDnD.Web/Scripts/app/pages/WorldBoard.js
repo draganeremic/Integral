@@ -39,18 +39,19 @@
     });
 
     $("#square").click(function () {
-        var rect = new LabeledRect({
-            left: 100,
-            top: 100,
-            width: 100,
-            height: 100,
-            fill: 'green',
-            lockMovementX: true,
-            padding: 10,
-            label: "Test"
-        });
+        //var rect = new LabeledRect({
+        //    left: 100,
+        //    top: 100,
+        //    width: 100,
+        //    height: 100,
+        //    fill: 'green',
+        //    padding: 10,
+        //    label: "Test"
+        //});
 
-        canvas.add(rect);
+        //canvas.add(rect);
+
+        DrawHexGrid();
     });
 
     $("#triangle").click(function () {
@@ -112,35 +113,60 @@
         }
     }
 
+    function DrawHexGrid()
+    {
+        var sideLenght = 65;
+        var sideDelta = GetSideDelta(sideLenght);
+        var polygon = new fabric.Polygon([
+            { x: sideDelta, y: 0 },
+            { x: sideDelta + sideLenght, y: 0 },
+            { x: (sideDelta + sideLenght + sideDelta), y: sideDelta },
+            { x: sideDelta + sideLenght, y: sideDelta + sideDelta },
+            { x: sideDelta, y: sideDelta + sideDelta },
+            { x: 0, y: sideDelta },
+        ]);
+
+        canvas.add(polygon.set({ left: 100, top: 200, fill: 'blue' }));
+    }
+
+    function GetSideDelta(lenght)
+    {
+        return Math.sqrt(Math.pow(lenght, 2) / 2);
+    }
+
+    function DrawSquareGrid() {
+
+    }
+
     function OnObjectMoved(options) {
         var activeObject = options.target;
-        if (activeObject != undefined && activeObject != null) {
-            var x = activeObject.left;
-            var y = activeObject.top;
+        //if (activeObject != undefined && activeObject != null) {
+        //    var x = activeObject.left;
+        //    var y = activeObject.top;
 
-            var snapX = x;
-            var snapY = y;
+        //    var snapX = x;
+        //    var snapY = y;
 
-            // this is only a test, snap calculation will be different
-            for (var i = 0; i < gridPoints.length; i++) {
-                var point = gridPoints[i];
-                if (point.X > snapX && point.Y > snapY) {
-                    var prevPoint;
-                    if (i > 0) {
-                        prevPoint = gridPoints[i - 1];
-                    }
-                    else {
-                        prevPoint = gridPoints[0];
-                    }
+        //    // this is only a test, snap calculation will be different
+        //    for (var i = 0; i < gridPoints.length; i++) {
+        //        var point = gridPoints[i];
+        //        if (point.X > snapX && point.Y > snapY) {
+        //            var prevPoint;
+        //            if (i > 0) {
+        //                prevPoint = gridPoints[i - 1];
+        //            }
+        //            else {
+        //                prevPoint = gridPoints[0];
+        //            }
 
-                    activeObject.left = prevPoint.X;
-                    activeObject.top = prevPoint.Y;
+        //            activeObject.left = prevPoint.X;
+        //            activeObject.top = prevPoint.Y;
 
-                    setTimeout(function () { canvas.renderAll(); }, 5);
-                    break;
-                }
-            }
-        }
+        //            setTimeout(function () { canvas.renderAll(); }, 5);
+        //            break;
+        //        }
+        //    }
+        //}
     };
 
     $("#imgDrag, #imgDrag1").draggable({
