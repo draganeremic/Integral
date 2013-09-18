@@ -176,6 +176,7 @@
     <Content Include="Scripts\libs\jquery-ui-1.10.3.custom.js" />
     <Content Include="Scripts\libs\jquery.signalR-1.1.3.js" />
     <Content Include="Scripts\libs\jquery.signalR-1.1.3.min.js" />
+    <Content Include="Scripts\libs\modernizr-2.6.2.min.js" />
     <Content Include="TestData\TestJSON.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
