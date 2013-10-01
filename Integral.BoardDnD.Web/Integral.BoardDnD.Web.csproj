@@ -142,6 +142,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\jquery-ui-1.10.3.custom.css" />
     <Content Include="css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\animated-overlay.gif" />
     <Content Include="Images\squirrel.jpg" />
@@ -166,6 +167,7 @@
     <Content Include="Scripts\app\models\NonPlayableCharacter.js" />
     <Content Include="Scripts\app\models\PlayableCharacter.js" />
     <Content Include="Scripts\app\models\SoundTriggerObject.js" />
+    <Content Include="Scripts\app\pages\home.js" />
     <Content Include="Scripts\app\pages\WorldBoard.js" />
     <Content Include="Scripts\libs\fabric-1.2.9.js" />
     <None Include="Scripts\libs\jquery-1.7.1.intellisense.js" />
@@ -174,6 +176,7 @@
     <Content Include="Scripts\libs\jquery-1.6.4.min.js" />
     <Content Include="Scripts\libs\jquery-1.7.1.js" />
     <Content Include="Scripts\libs\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\libs\jquery.flexslider.js" />
     <Content Include="Scripts\libs\jquery.signalR-1.1.3.js" />
     <Content Include="Scripts\libs\jquery.signalR-1.1.3.min.js" />
     <Content Include="Scripts\libs\modernizr-2.6.2.min.js" />

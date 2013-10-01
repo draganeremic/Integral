@@ -3,11 +3,20 @@
 }
 
 <!DOCTYPE html>
-
+    <!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>WorldBoard</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta name="viewport" content="target-densitydpi=device-dpi" />
+
+	<title>Project Integral - Create Campaign</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="scripts/libs/modernizr-2.6.2.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/fabric")
@@ -15,17 +24,185 @@
     @Scripts.Render("~/bundles/WorldBoard")
 </head>
 <body>
-    <div>
-        <input id="circle" type="button" value="Draw circle" />
-        <input id="square" type="button" value="Draw hex" />
-        <input id="triangle" type="button" value="Draw triangle" />
-        <input id="image" type="button" value="Draw image" />
-        <input id="export" type="button" value="To JSON" />
-        <img id="imgDrag" src="~/Images/squirrel.jpg" width="55" height="50" data-type="PlayableCharacter" data-name="Playable Squirrel" />
-        <img id="imgDrag1" src="~/Images/squirrel1.jpg" width="55" height="50" data-type="NonPlayableCharacter" data-name="Non-Playable Squirrel" />
-        <br />
-        <br />
-        <canvas id="c" width="1500" height="600" style="border:dotted"></canvas>
-    </div>
+    <section class="main-container">
+
+    	<div class="tab-parent top-tab">
+		    <div class="tab_container">
+		        <div id="tab16" class="tab_content">
+		        	<ul>
+		        		<li><a href="javascript:;" class="active">Tool-1</a></li>
+		        		<li><a href="javascript:;">Item no1</a></li>
+		        		<li><a href="javascript:;">Item no1</a></li>
+		        		<li><a href="javascript:;">Item no1</a></li>
+		        	</ul>
+		        </div>
+		        <div id="tab17" class="tab_content">
+		        	<ul>
+		        		<li><a href="javascript:;" class="active">Tool-2</a></li>
+		        		<li><a href="javascript:;">Item no2</a></li>
+		        		<li><a href="javascript:;">Item no2</a></li>
+		        		<li><a href="javascript:;">Item no2</a></li>
+		        	</ul>
+		        </div>
+		        <div id="tab18" class="tab_content">
+		        	<ul>
+		        		<li><a href="javascript:;" class="active">Tool-3</a></li>
+		        		<li><a href="javascript:;">Item no3</a></li>
+		        		<li><a href="javascript:;">Item no3</a></li>
+		        		<li><a href="javascript:;">Item no3</a></li>
+		        	</ul>
+		        </div>
+		        <div id="tab19" class="tab_content">
+		        	<ul>
+		        		<li><a href="javascript:;" class="active">Tool-4</a></li>
+		        		<li><a href="javascript:;">Item no4</a></li>
+		        		<li><a href="javascript:;">Item no4</a></li>
+		        		<li><a href="javascript:;">Item no4</a></li>
+		        	</ul>
+		        </div>
+		    </div>
+		    <ul class="tabs">
+		        <li><a href="#tab16">Tool-1</a></li>
+		        <li><a href="#tab17">Tool-2</a></li>
+		        <li><a href="#tab18">Tool-3</a></li>
+		        <li><a href="#tab19">Tool-4</a></li>
+		    </ul> 
+		</div>
+
+    	<div class="bottom-tab-holder">
+			<div class="tab-parent tab-wrap">
+			    <ul class="tabs horizontal">
+			        <li><a href="#tab1">Storyline</a></li>
+			        <li><a href="#tab2">Handouts</a></li>
+			        <li><a href="#tab3">Journal</a></li>
+			        <li><a href="#tab4">Characters</a></li>
+			        <li><a href="#tab5">Decks</a></li>
+			        <li><a href="#tab6">Settings</a></li>
+			        <li><a href="#tab7">Help</a></li>
+			    </ul>
+			    <div class="tab_container">
+			        <div id="tab1" class="tab_content">
+			        	Storyline
+			        </div>
+			        <div id="tab2" class="tab_content">
+			        	Handouts
+			        </div>
+			        <div id="tab3" class="tab_content">
+			        	Journal
+			        </div>
+			        <div id="tab4" class="tab_content">
+			        	Characters
+			        </div>
+			        <div id="tab5" class="tab_content">
+			        	Decks
+			        </div>
+			        <div id="tab6" class="tab_content">
+			        	Settings
+			        </div>
+			        <div id="tab7" class="tab_content">
+			        	Help
+			        </div>
+			        <div id="tab8" class="tab_content">
+			        	<div class="flexslider">
+				        	<ul class="slides">
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        	</ul>
+				        </div>
+			        </div>
+			        <div id="tab9" class="tab_content tab-effects">
+			        	<div class="flexslider">
+				        	<ul class="slides">
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        		<li><a href="javascript:;"><img src="assets/images/content-images/orc100x100.jpg"></a></li>
+				        	</ul>
+				        </div>
+			        </div>
+			        <div id="tab10" class="tab_content tab-sounds">
+			        	Sounds
+			        </div>
+			        <div id="tab11" class="tab_content">
+			        	Conditions
+			        </div>
+			        <div id="tab12" class="tab_content">
+			        	Spells
+			        </div>
+			        <div id="tab13" class="tab_content">
+			        	Skills
+			        </div>
+			        <div id="tab14" class="tab_content">
+			        	Abilities
+			        </div>
+			        <div id="tab15" class="tab_content">
+			        	Chat
+			        </div>
+			    </div>
+			    <ul class="tabs horizontal">
+			        <li><a href="#tab8">Images</a></li>
+			        <li><a href="#tab9">Effects</a></li>
+			        <li><a href="#tab10">Sounds</a></li>
+			        <li><a href="#tab11">Conditions</a></li>
+			        <li><a href="#tab12">Spells</a></li>
+			        <li><a href="#tab13">Skills</a></li>
+			        <li><a href="#tab14">Abilities</a></li>
+			        <li><a href="#tab15">Chat</a></li>
+			    </ul>
+			</div><!-- end tab-parent -->
+		</div><!-- end tab-holder main-tab -->
+        <canvas class="main-canvas">
+
+        </canvas><!-- end main-canvas -->
+		
+    </section><!-- end main-container -->
+    
+<!-- javascript -->
+<script type="text/javascript" src="scripts/app/pages/home.js"></script>
+<script type="text/javascript" src="scripts/libs/jquery.flexslider.js"></script>
+<!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
 </body>
 </html>
