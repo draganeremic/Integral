@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
     var canvas = new fabric.Canvas('c');
 
-    canvas.on('mouse:up', OnObjectMoved);
+    canvas.on('object:moving', OnObjectMoving);
+    DrawHexGrid();
 
     function GridPoint(x, y) {
         this.X = x;
@@ -69,8 +70,8 @@
 
     $("#circle").click(function () {
         var circle = new fabric.Circle({
-            left: 100,
-            top: 100,
+            left: 0,
+            top: 0,
             radius: 40,
             fill: 'blue',
             padding: 10
@@ -116,17 +117,45 @@
     function DrawHexGrid()
     {
         var sideLenght = 65;
-        var sideDelta = GetSideDelta(sideLenght);
+        //var sideDelta = GetSideDelta(sideLenght);
+        //var polygon = new fabric.Polygon([
+        //    { x: sideDelta, y: 0 },
+        //    { x: sideDelta + sideLenght, y: 0 },
+        //    { x: (sideLenght + 2 * sideDelta), y: sideDelta },
+        //    { x: sideDelta + sideLenght, y: 2 * sideDelta },
+        //    { x: sideDelta, y: 2 * sideDelta },
+        //    { x: 0, y: sideDelta },
+        //]);
+
+        var x = Math.ceil(canvas.width / (sideLenght * 3));
+        var y = Math.ceil(canvas.height / (sideLenght * 2));
+
         var polygon = new fabric.Polygon([
-            { x: sideDelta, y: 0 },
-            { x: sideDelta + sideLenght, y: 0 },
-            { x: (sideDelta + sideLenght + sideDelta), y: sideDelta },
-            { x: sideDelta + sideLenght, y: sideDelta + sideDelta },
-            { x: sideDelta, y: sideDelta + sideDelta },
-            { x: 0, y: sideDelta },
+                    { x: sideLenght, y: 0 },
+                    { x: 2 * sideLenght, y: 0 },
+                    { x: (3 * sideLenght), y: sideLenght },
+                    { x: 2 * sideLenght, y: 2 * sideLenght },
+                    { x: sideLenght, y: 2 * sideLenght },
+                    { x: 0, y: sideLenght },
         ]);
 
-        canvas.add(polygon.set({ left: 100, top: 200, fill: 'blue' }));
+        for (var i = 0; i < x; i++) {
+            for (var j = 0; j < y; j++) {
+                var polygon1 = polygon.clone();
+                var polygon2 = polygon.clone();
+
+                polygon1.toObject = function () {
+                    return undefined;
+                };
+
+                polygon2.toObject = function () {
+                    return undefined;
+                };
+
+                canvas.add(polygon1.set({ left: i * (sideLenght * 4), top: j * (sideLenght * 2), fill: 'none', stroke: 'gray', selectable: false }));
+                canvas.add(polygon2.set({ left: (i * (sideLenght * 4)) + (2 * sideLenght), top: (j * (sideLenght * 2)) + sideLenght, fill: 'none', stroke: 'gray', selectable: false }));
+            }
+        }
     }
 
     function GetSideDelta(lenght)
@@ -138,38 +167,38 @@
 
     }
 
-    function OnObjectMoved(options) {
+    function OnObjectMoving(options) {
         var activeObject = options.target;
-        //if (activeObject != undefined && activeObject != null) {
-        //    var x = activeObject.left;
-        //    var y = activeObject.top;
+        if (activeObject != undefined && activeObject != null) {
+            var x = activeObject.left;
+            var y = activeObject.top;
 
-        //    var snapX = x;
-        //    var snapY = y;
+            var snapX = x;
+            var snapY = y;
 
-        //    // this is only a test, snap calculation will be different
-        //    for (var i = 0; i < gridPoints.length; i++) {
-        //        var point = gridPoints[i];
-        //        if (point.X > snapX && point.Y > snapY) {
-        //            var prevPoint;
-        //            if (i > 0) {
-        //                prevPoint = gridPoints[i - 1];
-        //            }
-        //            else {
-        //                prevPoint = gridPoints[0];
-        //            }
+            // this is only a test, snap calculation will be different
+            for (var i = 0; i < gridPoints.length; i++) {
+                var point = gridPoints[i];
+                if (point.X > snapX && point.Y > snapY) {
+                    var prevPoint;
+                    if (i > 0) {
+                        prevPoint = gridPoints[i - 1];
+                    }
+                    else {
+                        prevPoint = gridPoints[0];
+                    }
 
-        //            activeObject.left = prevPoint.X;
-        //            activeObject.top = prevPoint.Y;
+                    activeObject.left = prevPoint.X;
+                    activeObject.top = prevPoint.Y;
 
-        //            setTimeout(function () { canvas.renderAll(); }, 5);
-        //            break;
-        //        }
-        //    }
-        //}
+                    setTimeout(function () { canvas.renderAll(); }, 5);
+                    break;
+                }
+            }
+        }
     };
 
-    $("#imgDrag, #imgDrag1").draggable({
+    $(".tool-box").draggable({
         drag: function (event, ui) {
             //console.log(event);
         },

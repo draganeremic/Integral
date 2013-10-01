@@ -1,5 +1,6 @@
 ﻿var BaseModel = fabric.util.createClass(fabric.Image, {
     type: 'BaseModel',
+    layer: 0,
     
     initialize: function (element, options) {
         options || (options = {});

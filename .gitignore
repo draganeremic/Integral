@@ -102,3 +102,5 @@ _ReSharper.*/
 Icon?
 ehthumbs.db
 Thumbs.db
+bin
+obj
