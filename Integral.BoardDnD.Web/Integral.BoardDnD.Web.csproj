@@ -168,7 +168,8 @@
     <Content Include="Scripts\app\models\NonPlayableCharacter.js" />
     <Content Include="Scripts\app\models\PlayableCharacter.js" />
     <Content Include="Scripts\app\models\SoundTriggerObject.js" />
-    <Content Include="Scripts\app\pages\home.js" />
+    <Content Include="Scripts\app\components\WorldBoardToolbox.js" />
+    <Content Include="Scripts\app\pages\HomePage.js" />
     <Content Include="Scripts\app\pages\WorldBoard.js" />
     <Content Include="Scripts\libs\fabric-1.2.9.js" />
     <None Include="Scripts\libs\jquery-1.7.1.intellisense.js" />
@@ -194,7 +195,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\app\components\" />
     <Folder Include="Scripts\app\services\" />
     <Folder Include="Scripts\app\util\" />
   </ItemGroup>

@@ -1,9 +1,4 @@
 $(document).ready(function(){
-	
-	$('.item').hover(function() {
-		$(this).find('ul').stop().slideToggle();
-	});
-
 	//Tabs
 	 //When page loads...
     $('.tab-parent').each(function(){
@@ -33,5 +28,4 @@ $(document).ready(function(){
         animationSpeed: 1000,
         itemMargin: 5,
       });
-
  });

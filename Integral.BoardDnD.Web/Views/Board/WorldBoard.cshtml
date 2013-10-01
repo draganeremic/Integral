@@ -16,7 +16,8 @@
 	<title>Project Integral - Create Campaign</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="scripts/libs/modernizr-2.6.2.min.js"></script>
+	@Scripts.Render("~/bundles/modernizr")
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/fabric")
@@ -200,8 +201,9 @@
     </section><!-- end main-container -->
     
 <!-- javascript -->
-<script type="text/javascript" src="scripts/app/pages/home.js"></script>
-<script type="text/javascript" src="scripts/libs/jquery.flexslider.js"></script>
+@Scripts.Render("~/bundles/WorldBoardToolbox")
+@Scripts.Render("~/bundles/flexslider")
+
 <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 </body>
