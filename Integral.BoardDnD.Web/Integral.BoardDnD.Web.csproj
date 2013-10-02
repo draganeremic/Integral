@@ -145,6 +145,8 @@
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\animated-overlay.gif" />
+    <Content Include="Images\dwarf 2.png" />
+    <Content Include="Images\orc100x100.jpg" />
     <Content Include="Images\squirrel.jpg" />
     <Content Include="Images\Squirrel1.jpg" />
     <Content Include="Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />

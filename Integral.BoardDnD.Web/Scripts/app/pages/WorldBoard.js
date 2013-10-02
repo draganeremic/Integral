@@ -29,9 +29,13 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    console.log(data);
-                    canvas.loadFromJSON(data);
-                    setTimeout(function () { canvas.renderAll(); }, 50);
+                    //try
+                    //{
+                    //    console.log(data);
+                    //    canvas.loadFromJSON(data);
+                    //    setTimeout(function () { canvas.renderAll(); }, 50);
+                    //}
+                    //catch (err) { }
                 }
             });
         });
@@ -198,7 +202,7 @@
         }
     };
 
-    $(".tool-box").draggable({
+    $("img.toolbox-item").draggable({
         drag: function (event, ui) {
             //console.log(event);
         },
