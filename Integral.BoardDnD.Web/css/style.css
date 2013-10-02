@@ -311,8 +311,19 @@ td {
 ------------------------------------------------------------------------------*/
 /*----------  main
 ------------------------------------------------------------------------------*/
-/*----------  green button
+/*----------  buttons
 ------------------------------------------------------------------------------*/
+.hide-show {
+  display: block;
+  background: white;
+  color: black;
+  font-size: 10px;
+  width: 55px;
+  text-align: center;
+  float: right; }
+  .hide-show:hover {
+    background: silver; }
+
 /*----------  green icons
 ------------------------------------------------------------------------------*/
 /*----------  layout
@@ -384,17 +395,17 @@ body {
   top: 0;
   left: 0;
   background: transparent; }
-  .top-tab .tab_content ul {
+  .top-tab .tab-content ul {
     background: silver;
     overflow: hidden;
     border-bottom: 1px solid white; }
-    .top-tab .tab_content ul li {
+    .top-tab .tab-content ul li {
       float: left; }
-      .top-tab .tab_content ul li:first-child {
+      .top-tab .tab-content ul li:first-child {
         width: 80px; }
-      .top-tab .tab_content ul li:first-child:hover a {
+      .top-tab .tab-content ul li:first-child:hover a {
         cursor: default; }
-      .top-tab .tab_content ul li a {
+      .top-tab .tab-content ul li a {
         display: block;
         padding: 0 10px;
         height: 25px;
@@ -422,8 +433,9 @@ body {
   bottom: 0;
   left: 0;
   width: 100%; }
-  .bottom-tab-holder .tab_container {
-    height: 160px; }
+  .bottom-tab-holder .tab-container {
+    height: 160px;
+    background: orange; }
   .bottom-tab-holder .tabs {
     background: silver; }
     .bottom-tab-holder .tabs li {
@@ -436,7 +448,7 @@ body {
         line-height: 25px;
         border-right: 1px solid white;
         color: black; }
-  .bottom-tab-holder .tab_content {
+  .bottom-tab-holder .tab-content {
     height: 160px;
     width: 100%;
     text-align: center;
@@ -446,6 +458,7 @@ body {
     box-sizing: border-box; }
 
 .tab-wrap {
+  position: relative;
   width: 960px;
   margin: 0 auto;
   border: 1px solid silver; }
@@ -761,3 +774,8 @@ html[xmlns] .slides {
       background: pink; }
     .item.four ul {
       left: -60px; }
+
+.button-wrap {
+  margin: 0 auto;
+  width: 960px;
+  overflow: hidden; }

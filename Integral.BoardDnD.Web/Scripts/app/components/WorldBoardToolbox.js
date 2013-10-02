@@ -1,10 +1,16 @@
 $(document).ready(function(){
-	//Tabs
-	 //When page loads...
+
+    //Show/Hide button
+    $('.hide-show').click(function() {
+        $('.tab-wrap').not('.hide-show').slideToggle();
+    });
+
+    //Tabs
+     //When page loads...
     $('.tab-parent').each(function(){
-        $(this).find(".tab_content").css({"position":"absolute","left":"-9999px","bottom":"0px"}); //Hide all content
+        $(this).find(".tab-content").css({"position":"absolute","left":"-9999px","bottom":"0px"}); //Hide all content
         $(this).find("ul.tabs li:first").addClass("active").show(); //Activate first tab
-        $(this).find(".tab_content:first").css({"position":"inherit","left":"auto","bottom":"auto"}); //Show first tab content
+        $(this).find(".tab-content:first").css({"position":"inherit","left":"auto","bottom":"auto"}); //Show first tab content
     });
 
      //On Click Event
@@ -12,7 +18,7 @@ $(document).ready(function(){
         var parents = $(this).parentsUntil('.tab-parent').parent();
         $("li", parents).removeClass("active"); //Remove any "active" class
         $(this).addClass("active"); //Add "active" class to selected tab
-        $(".tab_content", parents).css({"position":"absolute","left":"-9999px","bottom":"0px"}); //Hide all tab content
+        $(".tab-content", parents).css({"position":"absolute","left":"-9999px","bottom":"0px"}); //Hide all tab content
 
         var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
         $(activeTab).css({"position":"inherit","left":"auto","bottom":"auto"}); //Fade in the active ID content
@@ -27,5 +33,8 @@ $(document).ready(function(){
         itemWidth: 100,
         animationSpeed: 1000,
         itemMargin: 5,
+        prevText: "Prev",
+        nextText: "Next",
       });
+
  });
