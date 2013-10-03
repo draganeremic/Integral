@@ -339,20 +339,18 @@ body {
   overflow: hidden; }
 
 .main-container {
-  background: silver;
+  background: grey;
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: scroll; }
   .main-container.mcbg {
     background: silver url(../../assets/images/tavern.jpg) no-repeat 50% 50%;
     background-size: cover; }
 
 .main-canvas {
-  width: 100%;
-  height: 100%;
-  background: #dc8080;
-  background-size: cover;
-  overflow: hidden; }
+  width: 600px;
+  height: 400px;
+  background: #dc8080; }
 
 /*----------  header
 ------------------------------------------------------------------------------*/
@@ -430,7 +428,7 @@ body {
 
 .bottom-tab-holder {
   position: absolute;
-  bottom: 0;
+  bottom: 17px;
   left: 0;
   width: 100%; }
   .bottom-tab-holder .tab-container {
@@ -461,7 +459,7 @@ body {
   position: relative;
   width: 960px;
   margin: 0 auto;
-  border: 1px solid silver; }
+  border: 1px solid white; }
 
 .active {
   background: grey; }
