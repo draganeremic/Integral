@@ -348,6 +348,8 @@ body {
     background-size: cover; }
 
 .main-canvas {
+  display: block;
+  margin: 0 auto;
   width: 600px;
   height: 400px;
   background: #dc8080; }
