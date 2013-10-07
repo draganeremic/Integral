@@ -34,7 +34,24 @@ $(document).ready(function(){
         animationSpeed: 1000,
         itemMargin: 5,
         prevText: "Prev",
-        nextText: "Next",
-      });
+        nextText: "Next"
+     });
 
- });
+     $('img.toolbox-item').draggable({
+         drag: function (event, ui) {
+             //console.log(event);
+         },
+         revert: 'invalid',
+         helper: 'clone'
+     });
+     $('#c').droppable({
+         drop: function (event, ui) {
+             AddImageToCanvas(ui.draggable.attr('src'), { top: ui.offset.top, left: ui.offset.left, name: ui.draggable.attr('data-name'), type: ui.draggable.attr('data-type') })
+         },
+         accept: function (el) {
+             /* This is a filter function, you can perform logic here 
+                depending on the element being filtered: */
+             return el.is('img');
+         }
+     });
+});
